@@ -36,3 +36,7 @@ body {
 #blur {
   transition: filter 600ms ease;
 }
+
+input[type="date"] {
+  appearance: textfield;
+}

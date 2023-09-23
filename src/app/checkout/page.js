@@ -2,8 +2,7 @@ import TicketForm from "../components/TicketForm";
 
 export default function Checkout() {
   return (
-    <div>
-      <h1>checkout</h1>
+    <div className="px-4 py-2 mt-12">
       <TicketForm />
     </div>
   );

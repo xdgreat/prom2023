@@ -28,7 +28,7 @@ export default function NavBar() {
     },
     {
       element: "Activity Hub",
-      href: "/activityHub",
+      href: "/activity",
     },
     {
       element: "Gallery",
@@ -76,7 +76,7 @@ export default function NavBar() {
         </h4>
         {navLinks.map((el, key) => {
           return (
-            <div key={key}>
+            <div key={key} onClick={() => setIsOpen(false)}>
               <Link key={key} href={el.href} className="text-white/60">
                 <span className={path === el.href ? "text-white" : ""}>
                   {el.element}
