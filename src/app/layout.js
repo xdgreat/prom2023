@@ -4,8 +4,8 @@ import NavBar from "./components/NavBar";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Loader from "./components/Loader";
-
 const inter = Inter({ subsets: ["latin"] });
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: "Prom 2023",
@@ -18,8 +18,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <NavBar />
+        <Analytics />
         <div id="blur">{children}</div>
-        <Footer />
       </body>
     </html>
   );
