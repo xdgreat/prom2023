@@ -8,11 +8,13 @@ export default function GuestPending() {
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    fetch("/api/guest", {
-      method: "GET",
-    })
-      .then((res) => res.json())
-      .then((data) => getGuestData(data));
+    setTimeout(() => {
+      fetch("/api/guest", {
+        method: "GET",
+      })
+        .then((res) => res.json())
+        .then((data) => getGuestData(data));
+    }, 5000);
   }, []);
 
   const handleAccept = (orderNumber) => {

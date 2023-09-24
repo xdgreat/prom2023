@@ -47,8 +47,8 @@ export default function Home() {
               {" "}
               MGM students{" "}
             </span>
-            and alumni. Enjoy unlimited food and drinks, exciting activities,
-            and a professional photographer to capture your moments.
+            and alumni. Enjoy all you can eat food and drinks, exciting
+            activities, and a professional photographer to capture your moments.
           </p>
           <div>
             <EventCards />
