@@ -1,9 +1,19 @@
 import { getAcceptedGuests } from "./orderNumberData";
 
 export default async function orderNumber(context) {
-  const guest = await getAcceptedGuests(context.params.orderNumber);
+  //   const guest = await getAcceptedGuests(context.params.orderNumber);
+  const guest = undefined;
+  try {
+    const guests = await fetch("http:localhost:3000/api/accept/guests", {
+      method: "POST",
+      body: JSON.stringify({ orderNumber: context.params.orderNumber }),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  } catch (err) {
+    console.log(err);
+  }
   console.log(context.params.orderNumber);
-  console.log(guest);
   if (!guest || !guest[0]) {
     return <h1>Guest Not Found</h1>;
   }

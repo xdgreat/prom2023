@@ -52,6 +52,8 @@ export default function NavBar() {
           src={isOpen ? "/imgs/menuopen.png" : "/imgs/menuclose.png"}
           alt="Hamburger Menu"
           className="w-14 pl-2 md:w-16"
+          width={14}
+          height={14}
         />
       </button>
     );
