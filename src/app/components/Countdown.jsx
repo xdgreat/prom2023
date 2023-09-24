@@ -41,18 +41,18 @@ export default function Countdown() {
   }, []);
 
   return (
-    <div>
-      <div className="flex text-xl border border-secondary rounded-lg px-4 mx-4 py-2 justify-center items-center text-center">
-        <div className=" p-1 rounded-lg text-white/80">
-          <span className="text-white">{countdown.days}</span> days
+    <div className="px-4">
+      <div className="flex text-xl border border-secondary max-w-fit mx-auto rounded-lg px-4 py-2 justify-center items-center text-center">
+        <div className=" p-1 rounded-lg lg:text-2xl text-white/60">
+          <span className="text-white ">{countdown.days}</span> days
         </div>
-        <div className=" p-1 rounded-lg text-white/80">
+        <div className=" p-1 rounded-lg lg:text-2xl text-white/60">
           <span className="text-white">{countdown.hours}</span> hours
         </div>
-        <div className=" p-1 rounded-lg text-white/80">
+        <div className=" p-1 rounded-lg lg:text-2xl text-white/60">
           <span className="text-white">{countdown.minutes}</span> minutes
         </div>
-        <div className=" p-1 rounded-lg text-white/80">
+        <div className=" p-1 rounded-lg lg:text-2xl text-white/60">
           <span className="text-white">{countdown.seconds}</span> seconds
         </div>
       </div>

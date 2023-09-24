@@ -14,6 +14,7 @@ export default function TicketForm() {
     ticketType: "standard",
     orderNumber: 0,
     status: "pending",
+    date: new Date(),
   });
   const [error, setError] = useState("");
   const [hasPurchased, setHasPurchased] = useState(false);
@@ -100,11 +101,11 @@ export default function TicketForm() {
   return (
     <>
       {!hasPurchased ? (
-        <div className="grid grid-cols-2 gap-4 border-2 border-accent px-8 py-8 justify-center rounded-xl shadow-lg items-center">
-          <h4 className="text-2xl border-accent border-b-2 w-fit mx-auto text-center col-span-2">
+        <div className="grid grid-cols-2 mx-auto gap-4 max-w-2xl border-2 border-accent px-8 py-8 justify-center rounded-xl shadow-lg items-center">
+          <h4 className="text-2xl border-accent md:text-3xl border-b-2 w-fit mx-auto text-center col-span-2">
             Purchase a Ticket!
           </h4>
-          <p className="col-span-2 mb-8 text-sm text-white/90 text-center">
+          <p className="col-span-2 mb-8 text-sm text-white/90 md:text-base text-center">
             Include extra info if needed, such as an alternative name or
             additional details.
           </p>
@@ -113,7 +114,7 @@ export default function TicketForm() {
             name="firstName"
             value={formData.firstName}
             onChange={handleChange}
-            className="text-md px-2 py-1 bg-white/10 border-2 border-secondary rounded-md focus-within:border-white/60 outline-none col-span-1"
+            className="text-md px-2 py-1 bg-white/10 border-2 border-secondary lg:text-lg rounded-md focus-within:border-white/60 outline-none col-span-1"
             placeholder="First Name"
           />
           <input
@@ -121,7 +122,7 @@ export default function TicketForm() {
             name="lastName"
             value={formData.lastName}
             onChange={handleChange}
-            className="text-md px-2 py-1 bg-white/10 border-2 border-secondary rounded-md focus-within:border-white/60 outline-none col-span-1"
+            className="text-md px-2 py-1 bg-white/10 lg:text-lg border-2 border-secondary rounded-md focus-within:border-white/60 outline-none col-span-1"
             placeholder="Last Name"
           />
           <input
@@ -131,7 +132,7 @@ export default function TicketForm() {
             onChange={handleChange}
             style={{ appearance: "textfield" }}
             inputMode="numeric"
-            className="text-lg px-2 py-1 min-h-[2.5rem] bg-white/10 border-2 border-secondary rounded-md focus-within:border-white/60 outline-none col-span-2"
+            className="text-lg px-2 py-1 min-h-[2.5rem] lg:text-lg bg-white/10 border-2 border-secondary rounded-md focus-within:border-white/60 outline-none col-span-2"
             placeholder="dd/mm/yyyy"
           />
           <input
@@ -139,7 +140,7 @@ export default function TicketForm() {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="text-md px-2 py-1 bg-white/10 border-2 border-secondary rounded-md focus-within:border-white/60 outline-none col-span-1"
+            className="text-md px-2 py-1 bg-white/10 lg:text-lg border-2 border-secondary rounded-md focus-within:border-white/60 outline-none col-span-1"
             placeholder="Email"
           />
           <input
@@ -147,20 +148,20 @@ export default function TicketForm() {
             name="phoneNumber"
             value={formData.phoneNumber}
             onChange={handleChange}
-            className="text-md px-2 py-1 bg-white/10 border-2 border-secondary rounded-md focus-within:border-white/60 outline-none col-span-1"
+            className="text-md px-2 py-1 bg-white/10 lg:text-lg border-2 border-secondary rounded-md focus-within:border-white/60 outline-none col-span-1"
             placeholder="Phone Number"
           />
           <textarea
             name="extraInformation"
             value={formData.extraInformation}
             onChange={handleChange}
-            className="text-md px-2 py-1 bg-white/10 border-2 border-secondary rounded-md focus-within:border-white/60 outline-none col-span-2"
+            className="text-md px-2 py-1 bg-white/10 lg:text-lg border-2 border-secondary rounded-md focus-within:border-white/60 outline-none col-span-2"
             placeholder="Extra Information (Optional)"
           />
           <select
             name="ticketType"
             value={formData.ticketType}
-            className="text-md px-2 py-2 bg-white/10 border-2 border-secondary rounded-md focus-within:border-white/60 outline-none col-span-2"
+            className="text-md px-2 py-2 bg-white/10 text-white/80 lg:text-lg border-2 border-secondary rounded-md focus-within:border-white/60 outline-none col-span-2"
             onChange={handleChange}
             style={{
               backgroundColor: "var(--tw-bg-secondary)",
@@ -169,23 +170,23 @@ export default function TicketForm() {
             }}>
             <option
               value="standard"
-              className="bg-secondary font-serif text-white">
+              className="bg-secondary font-serif lg:text-lg text-white/80">
               Standard Ticket - ${standardTicketPrice}
             </option>
             <option
               value="plusOne"
-              className="bg-secondary font-serif text-white">
+              className="bg-secondary font-serif lg:text-lg text-white/80">
               Plus One Ticket - ${plusOneTicketPrice}
             </option>
           </select>
           <div className="col-span-2">
-            <label className="flex items-center space-x-2 text-white/90">
+            <label className="flex items-center lg:text-lg space-x-2 text-white/90">
               <input
                 type="checkbox"
                 name="agreeToTOS"
                 checked={agreeToTOS}
                 onChange={handleAgreeToTOSChange}
-                className="text-accent rounded-md focus:ring-accent"
+                className="text-accent rounded-md lg:text-lg focus:ring-accent"
                 required
               />
               <span>
@@ -202,7 +203,7 @@ export default function TicketForm() {
           <p className="col-span-2 text-red-600">{error}</p>
           <button
             type="submit"
-            className="col-span-2 px-4 py-2 bg-accent/80 rounded-md"
+            className="col-span-2 px-4 py-2 bg-accent/80 lg:text-lg rounded-md"
             onClick={handleSubmit}>
             Purchase
           </button>

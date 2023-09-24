@@ -36,7 +36,7 @@ export default function NavBar() {
     },
     {
       element: "Terms and Conditions",
-      href: "/tos",
+      href: "/terms-of-service",
     },
   ];
 
@@ -50,28 +50,32 @@ export default function NavBar() {
         <img
           src={isOpen ? "/imgs/menuopen.png" : "/imgs/menuclose.png"}
           alt="Hamburger Menu"
-          className="w-14 pl-2"
+          className="w-14 pl-2 md:w-16"
         />
       </button>
     );
   }
 
   return (
-    <nav className="flex flex-row items-center justify-between h-[10vh] sticky top-0 bg-inherit z-50 px-4 isolate filter-none">
+    <nav className="flex max-w-7xl mx-auto flex-row items-center justify-between h-[10vh] sticky top-0 bg-inherit z-50 px-4 isolate filter-none">
       <div>
         <HamburgerMenu />
       </div>
-      <div className="font-semibold  text-2xl">Prom 2023</div>
+      <Link
+        className="font-semibold border-b-2 border-accent text-2xl"
+        href={"/"}>
+        Prom 2023
+      </Link>
       <Link
         href={"/checkout"}
-        className="uppercase px-3 py-1.5 bg-accent rounded-md">
+        className="uppercase px-3 py-1.5 bg-accent rounded-md md:text-xl">
         Buy Now
       </Link>
       <div
         className={`${
           isOpen ? "in" : "out"
-        } absolute top-[10vh] rounded-md flex-col border border-accent left-1/2 border-solid w-[70vw] px-4 flex pt-4 z-20 isolate bg-black text-lg font-semibold text-white/90 gap-4`}>
-        <h4 className="text-center text-xl mb-4 border-accent border-b-2 w-fit mx-auto">
+        } absolute top-[10vh] rounded-md max-w-xl flex-col border border-accent mx-auto left-1/2 border-solid w-[70vw] px-4 flex pt-4 z-50 isolate bg-black text-lg font-semibold text-white/90 gap-4`}>
+        <h4 className="text-center  text-xl mb-4 border-accent border-b-2 w-fit mx-auto">
           Navigation
         </h4>
         {navLinks.map((el, key) => {

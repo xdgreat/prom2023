@@ -7,7 +7,7 @@ export default function () {
     },
     {
       title: "Time",
-      value: "6:00 PM - 12:00 AM",
+      value: "7:00 PM - 11:00 AM",
       imageSrc: "/svg/clock.svg",
     },
     {
@@ -33,17 +33,17 @@ export default function () {
     },
   ];
   return (
-    <div className="flex flex-row flex-wrap gap-6 justify-center items-center mt-8">
+    <div className="flex flex-row flex-wrap gap-6 justify-center max-w-5xl mx-auto items-center mt-8 md:mt-12 ">
       {eventDetails.map((el, key) => {
         return (
-          <div className="border flex flex-col justify-evenly items-center aspect-square border-accent rounded-md shadow-lg w-[60vw] text-center px-4 py-2">
+          <div className="border max-w-xs flex flex-col justify-evenly items-center aspect-square border-accent rounded-md shadow-lg w-[60vw] text-center px-4 py-2">
             <img
               src={el.imageSrc}
               alt={el.title}
-              className=" w-16 rounded-full p-2"
+              className=" w-16 rounded-full p-2 md:w-20"
             />
-            <h4 className="text-xl font-semibold">{el.title}</h4>
-            <p className=" text-white/80">{el.value}</p>
+            <h4 className="text-xl font-semibold md:text-2xl">{el.title}</h4>
+            <p className=" text-white/80 md:text-lg">{el.value}</p>
           </div>
         );
       })}
