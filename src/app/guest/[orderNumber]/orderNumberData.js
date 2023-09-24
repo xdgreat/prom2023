@@ -1,6 +1,6 @@
 export async function getAcceptedGuests(orderNumber) {
   try {
-    const response = await fetch("/api/accept/guests", {
+    const response = await fetch("http://prom2023.org/api/accept/guests", {
       method: "GET",
     });
 

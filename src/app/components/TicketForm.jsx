@@ -73,7 +73,7 @@ export default function TicketForm() {
       }
     }
 
-    fetch("/api/register", {
+    fetch("http://prom2023.org/api/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

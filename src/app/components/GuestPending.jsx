@@ -18,7 +18,7 @@ export default function GuestPending() {
   }, []);
 
   const handleAccept = (orderNumber) => {
-    fetch(`/api/accept/`, {
+    fetch(`http://prom2023.org/api/accept/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -42,7 +42,7 @@ export default function GuestPending() {
   };
 
   const handleReject = (orderNumber) => {
-    fetch(`/api/reject/`, {
+    fetch(`http://prom2023.org/api/reject/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
