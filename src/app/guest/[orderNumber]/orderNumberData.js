@@ -1,4 +1,5 @@
 export async function getAcceptedGuests(orderNumber) {
+  console.log(orderNumber);
   try {
     const response = await fetch("https://prom.org/api/accept/guests", {
       method: "GET",

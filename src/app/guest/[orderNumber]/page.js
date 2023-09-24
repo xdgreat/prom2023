@@ -2,6 +2,8 @@ import { getAcceptedGuests } from "./orderNumberData";
 
 export default async function orderNumber(context) {
   const guest = await getAcceptedGuests(context.params.orderNumber);
+  console.log(context.params.orderNumber);
+  console.log(guest);
   if (!guest || !guest[0]) {
     return <h1>Guest Not Found</h1>;
   }
