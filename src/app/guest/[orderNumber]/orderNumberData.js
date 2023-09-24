@@ -2,7 +2,7 @@ export async function getAcceptedGuests(orderNumber) {
   const url = window.location.hostname;
   console.log(url);
   try {
-    const response = await fetch("https://prom2023.org.com/api/accept/guests", {
+    const response = await fetch("/api/accept/guests", {
       method: "GET",
     });
 
