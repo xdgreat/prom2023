@@ -8,7 +8,7 @@ export default function GuestPending() {
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    setTimeout(() => {
+    setInterval(() => {
       fetch("/api/guest", {
         method: "GET",
       })
