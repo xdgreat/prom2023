@@ -9,7 +9,7 @@ export default function Home() {
       <section className="text-center mt-4 lg:flex-row lg:text-start lg:max-w-[80vw] 2xl:max-w-[60vw] md:max-w-[80vw] mx-auto flex flex-col">
         <div className=" px-4 py-2  flex items-center md:items-start justify-center  flex-col">
           <h1 className="text-4xl my-8 lg:text-6xl">
-            Welcome to the class of '23{" "}
+            Welcome to the class of &apos;23{" "}
             <span className=" text-accent">Prom Night</span>
           </h1>
           <p className="text-base md:text-lg lg:text-xl">
