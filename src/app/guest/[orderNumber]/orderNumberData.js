@@ -11,7 +11,6 @@ export async function getAcceptedGuests(orderNumber) {
     }
 
     const data = await response.json();
-    console.log(orderNumber);
     const filteredData = data.filter((guest) => {
       if (parseInt(guest.orderNumber) === parseInt(orderNumber)) {
         return guest;

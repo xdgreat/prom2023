@@ -6,7 +6,6 @@ async function generateUniqueOrderNumber(guestsCollection) {
   let isUnique = false;
   while (!isUnique) {
     orderNumber = Math.floor(Math.random() * 9000) + 1000;
-    console.log(orderNumber);
     const existingGuest = await guestsCollection.findOne({ orderNumber });
     if (!existingGuest) {
       isUnique = true;

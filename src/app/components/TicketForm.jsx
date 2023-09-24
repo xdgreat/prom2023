@@ -73,8 +73,6 @@ export default function TicketForm() {
       }
     }
 
-    console.log(formData);
-
     fetch("/api/register", {
       method: "POST",
       headers: {
