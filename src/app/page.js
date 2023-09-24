@@ -31,6 +31,7 @@ export default function Home() {
         <img
           src="/svg/partyv2.svg"
           className="w-[60vw] max-w-lg mx-auto mt-8"
+          alt=""
         />
       </section>
       <section className="mt-12">
