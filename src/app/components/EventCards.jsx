@@ -8,7 +8,7 @@ const eventDetails = [
   },
   {
     title: "Time",
-    value: "7:00 PM - 11:00 AM",
+    value: "7:00 PM - 11:00 PM",
     imageSrc: "/svg/clock.svg",
   },
   {
