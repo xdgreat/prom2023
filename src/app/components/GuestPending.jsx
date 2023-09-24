@@ -109,11 +109,17 @@ export default function GuestPending() {
           }`}>
           <div className="flex justify-between gap-8 items-center">
             <span className="text-sm">
-              R.<span className="font-semibold">{el.orderNumber}</span> Name:{" "}
+              #<span className="font-semibold">{el.orderNumber}</span> Name:{" "}
               <span className="font-semibold">
                 {el.firstName} {el.lastName}
               </span>
             </span>
+            <div className="flex justify-between gap-8 items-center">
+              <span className="text-sm">
+                Ticket Type:
+                <span className="font-semibold">{el.ticketType}</span>
+              </span>
+            </div>
             {el.status === "pending" ? (
               selectedGuest === el.orderNumber ? (
                 <div className="flex gap-2 flex-col">
