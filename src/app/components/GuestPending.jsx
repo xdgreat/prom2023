@@ -9,7 +9,7 @@ export default function GuestPending() {
 
   useEffect(() => {
     setInterval(() => {
-      fetch("/api/guest", {
+      fetch("https://prom.org/api/guest", {
         method: "GET",
       })
         .then((res) => res.json())
