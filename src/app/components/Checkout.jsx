@@ -15,7 +15,7 @@ export default function Checkout({ checkoutDetails }) {
         <p className="my-2">
           1. Send your payment via M-Paisa to the following number:{" "}
           <span className="font-semibold border-b-2 text-white/90 border-accent">
-            9073079
+            2430575
           </span>
           .
         </p>
