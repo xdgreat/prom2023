@@ -18,7 +18,7 @@ export default function LoginPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("http://prom2023.org/api/login", {
+    fetch("/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
