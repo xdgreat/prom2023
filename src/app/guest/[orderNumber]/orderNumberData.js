@@ -1,17 +1,8 @@
-// export async function getGuests(name) {
-//   return new Promise((resolve) => {
-//     const member = membersData[name];
-//     if (member) {
-//       resolve(member);
-//     } else {
-//       resolve(null);
-//     }
-//   });
-// }
-
 export async function getAcceptedGuests(orderNumber) {
+  const url = window.location.hostname;
+  console.log(url);
   try {
-    const response = await fetch("http://localhost:3000/api/accept/guests", {
+    const response = await fetch("https://prom2023.org.com/api/accept/guests", {
       method: "GET",
     });
 
