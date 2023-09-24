@@ -9,6 +9,7 @@ export async function GET() {
       .find({ status: "accepted" })
       .toArray();
 
+    console.log(acceptedUsers);
     return NextResponse.json(acceptedUsers);
   } catch (err) {
     return NextResponse.json({ success: false });
