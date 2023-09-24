@@ -12,6 +12,8 @@ export default function Countdown() {
   });
 
   useEffect(() => {
+    const targetDate = new Date("2023-12-31T23:59:59"); // Define targetDate here
+
     const interval = setInterval(() => {
       const currentDate = new Date();
       const timeDifference = targetDate - currentDate;
@@ -38,7 +40,7 @@ export default function Countdown() {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [targetDate]);
+  }, []); // Empty dependency array since targetDate is defined inside the effect
 
   return (
     <div className="px-4">

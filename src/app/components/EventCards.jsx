@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function () {
   const eventDetails = [
     {
@@ -39,7 +41,7 @@ export default function () {
           <div
             key={key}
             className="border max-w-xs flex flex-col justify-evenly items-center aspect-square border-accent rounded-md shadow-lg w-[60vw] text-center px-4 py-2">
-            <img
+            <Image
               src={el.imageSrc}
               alt={el.title}
               className=" w-16 rounded-full p-2 md:w-20"
