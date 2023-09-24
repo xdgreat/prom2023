@@ -36,7 +36,9 @@ export default function () {
     <div className="flex flex-row flex-wrap gap-6 justify-center max-w-5xl mx-auto items-center mt-8 md:mt-12 ">
       {eventDetails.map((el, key) => {
         return (
-          <div className="border max-w-xs flex flex-col justify-evenly items-center aspect-square border-accent rounded-md shadow-lg w-[60vw] text-center px-4 py-2">
+          <div
+            key={key}
+            className="border max-w-xs flex flex-col justify-evenly items-center aspect-square border-accent rounded-md shadow-lg w-[60vw] text-center px-4 py-2">
             <img
               src={el.imageSrc}
               alt={el.title}

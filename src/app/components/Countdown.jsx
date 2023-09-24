@@ -38,7 +38,7 @@ export default function Countdown() {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [targetDate]);
 
   return (
     <div className="px-4">

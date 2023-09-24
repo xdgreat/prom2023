@@ -1,6 +1,7 @@
 import Link from "next/link";
 import EventCards from "./components/EventCards";
 import Countdown from "./components/Countdown";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -28,7 +29,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <img
+        <Image
           src="/svg/partyv2.svg"
           className="w-[60vw] max-w-lg mx-auto mt-8"
           alt=""

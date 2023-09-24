@@ -3,6 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Footer from "./Footer";
+import Image from "next/image";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,7 +48,7 @@ export default function NavBar() {
 
     return (
       <button onClick={handleClick}>
-        <img
+        <Image
           src={isOpen ? "/imgs/menuopen.png" : "/imgs/menuclose.png"}
           alt="Hamburger Menu"
           className="w-14 pl-2 md:w-16"
