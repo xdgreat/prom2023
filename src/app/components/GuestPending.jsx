@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-
 export default function GuestPending() {
   const [guestData, getGuestData] = useState([]);
   const [selectedGuest, setSelectedGuest] = useState(null);
@@ -10,6 +9,7 @@ export default function GuestPending() {
     setInterval(() => {
       fetch("/api/guest", {
         method: "GET",
+        next: { revalidate: 5 },
       })
         .then((res) => res.json())
         .then((data) => getGuestData(data));
