@@ -1,5 +1,5 @@
 export default async function orderNumber(context) {
-  const guest = await fetch("http://localhost:3000/api/accept/e-ticket", {
+  const guest = await fetch("https://prom2023.org/api/accept/e-ticket", {
     method: "POST",
     body: JSON.stringify({ orderNumber: context.params.orderNumber }),
   })
