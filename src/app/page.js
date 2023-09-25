@@ -2,6 +2,7 @@ import Link from "next/link";
 import EventCards from "./components/EventCards";
 import Countdown from "./components/Countdown";
 import Image from "next/image";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -64,6 +65,7 @@ export default function Home() {
         </h4>
         <Countdown />
       </section>
+      <Footer />
     </>
   );
 }
