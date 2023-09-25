@@ -1,4 +1,4 @@
-import { getDB } from "@/app/util/db";
+import { getDB, run } from "@/app/util/db";
 import { NextResponse } from "next/server";
 
 export async function GET() {
@@ -8,6 +8,6 @@ export async function GET() {
     const guests = await guestsCollection.find({}).toArray();
     return NextResponse.json(guests);
   } catch (error) {
-    return NextResponse.json({ message: "Something went wrong" });
+    return NextResponse.json({ message: "Something went wrong", error: error });
   }
 }

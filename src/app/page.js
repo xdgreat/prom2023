@@ -31,6 +31,8 @@ export default function Home() {
         </div>
         <Image
           src="/svg/partyv2.svg"
+          width={140}
+          height={140}
           className="w-[60vw] max-w-lg mx-auto mt-8"
           alt=""
         />

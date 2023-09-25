@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useState } from "react";
 
 export default function GuestPending() {
@@ -14,6 +13,7 @@ export default function GuestPending() {
       })
         .then((res) => res.json())
         .then((data) => getGuestData(data));
+      console.log(guestData);
     }, 5000);
   }, []);
 

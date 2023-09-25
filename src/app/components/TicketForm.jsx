@@ -103,9 +103,11 @@ export default function TicketForm() {
           <h4 className="text-2xl border-accent md:text-3xl border-b-2 w-fit mx-auto text-center col-span-2">
             Purchase a Ticket!
           </h4>
-          <p className="col-span-2 mb-8 text-sm text-white/90 md:text-base text-center">
+          <p className="col-span-2 mb-8 text-sm text-white/80 md:text-base text-start">
             Include extra info if needed, such as an alternative name or
             additional details.
+            <br />
+            Effective October 15, 2023, there will be adjustments to pricing
           </p>
           <input
             type="text"

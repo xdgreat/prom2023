@@ -1,19 +1,11 @@
-import { getAcceptedGuests } from "./orderNumberData";
-
 export default async function orderNumber(context) {
-  //   const guest = await getAcceptedGuests(context.params.orderNumber);
-  const guest = undefined;
-  try {
-    const guests = await fetch("https://prom2023.org/api/accept/guests", {
-      method: "POST",
-      body: JSON.stringify({ orderNumber: context.params.orderNumber }),
-    })
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-  } catch (err) {
-    console.log(err);
-  }
-  console.log(context.params.orderNumber);
+  const guest = await fetch("http://localhost:3000/api/accept/e-ticket", {
+    method: "POST",
+    body: JSON.stringify({ orderNumber: context.params.orderNumber }),
+  })
+    .then((res) => res.json())
+    .then((data) => data);
+
   if (!guest || !guest[0]) {
     return <h1>Guest Not Found</h1>;
   }

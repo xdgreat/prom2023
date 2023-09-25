@@ -25,7 +25,7 @@ export const POST = async (request) => {
     const { firstName, lastName, email, phoneNumber } = guest;
     const countryCode = "+679";
     const formattedPhoneNumber = `${countryCode}${phoneNumber}`;
-    const eTicketLink = `https://prom2023.org/guest/${orderNumber}`;
+    const eTicketLink = `https://prom2023.org/e-ticket/${orderNumber}`;
     const message = `Hi ${firstName} ${lastName},\n\nThank you for your purchase! Your order number is #${orderNumber}.\n\nClick here to access your E-Ticket: ${eTicketLink}\n\nThank you for choosing our event!`;
 
     await client.messages.create({
