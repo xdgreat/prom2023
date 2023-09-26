@@ -9,7 +9,7 @@ export default function GuestPending() {
     setInterval(() => {
       fetch("/api/guest", {
         method: "GET",
-        next: { revalidate: 5 },
+        cache: "no-store",
       })
         .then((res) => res.json())
         .then((data) => getGuestData(data));
