@@ -23,8 +23,8 @@ export default function TicketForm() {
   const currentDate = new Date();
   const october15thDate = new Date("2023-10-15");
 
-  const standardTicketPrice = currentDate <= october15thDate ? 50 : 65;
-  const plusOneTicketPrice = currentDate <= october15thDate ? 90 : 115;
+  const standardTicketPrice = currentDate <= october15thDate ? 30 : 50;
+  const plusOneTicketPrice = currentDate <= october15thDate ? 55 : 90;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
