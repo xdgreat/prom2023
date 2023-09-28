@@ -24,7 +24,7 @@ export default function Home() {
               Get Your Tickets
             </Link>
             <Link
-              href={"/"}
+              href={"/activity"}
               className="px-4 py-2 bg-secondary w-fit rounded-lg lg:text-xl">
               Activity Hub
             </Link>
