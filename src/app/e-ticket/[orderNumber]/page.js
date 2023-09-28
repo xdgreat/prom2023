@@ -23,7 +23,7 @@ export default async function orderNumber(context) {
   } = guest[0];
 
   return (
-    <div className="w-max mx-auto border-accent border-2 absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 p-8 shadow-md rounded-lg">
+    <div className="w-96 mx-auto border-accent border-2 absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 p-8 shadow-md rounded-lg">
       <h1 className="text-2xl font-semibold text-center mb-4 border-b-2 border-accent w-fit mx-auto">
         E-Ticket
       </h1>
@@ -51,9 +51,10 @@ export default async function orderNumber(context) {
           <span className="text-base text-white">{ticketType}</span>
         </p>
       </div>
-      <div className="mb-8">
-        <p className="text-sm text-white/80">
-          Additional Information: {extraInformation ? extraInformation : "-"}
+      <div className="mb-8 text-white/80">
+        Additional Information:
+        <p className="text-sm text-white">
+          {extraInformation ? extraInformation : "-"}
         </p>
       </div>
       <p className="text-lg font-semibold border-2 w-fit px-4 py-2 block mx-auto rounded-md border-green-500">
