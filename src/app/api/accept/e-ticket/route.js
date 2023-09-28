@@ -1,4 +1,4 @@
-import { closeDB, connectDB, getDB } from "@/app/util/db";
+import { getDB } from "@/app/util/db";
 import { NextResponse } from "next/server";
 
 export async function POST(request) {
@@ -16,4 +16,4 @@ export async function POST(request) {
   }
 }
 
-export const revalidate = 300;
+export const dynamic = "force-dynamic";
