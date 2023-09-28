@@ -13,13 +13,12 @@ const eventDetails = [
   },
   {
     title: "Age Limit",
-    value: "Only guests over 18 will be allowed in the venue.",
+    value: "Only guests over 18 will be served alcohol.",
     imageSrc: "/svg/child.svg",
   },
   {
     title: "Guests",
-    value:
-      "MGM students and alumni, outsiders welcome with a companion ticket.",
+    value: "MGM students and outsiders are welcome with a companion ticket.",
     imageSrc: "/svg/person.svg",
   },
   {

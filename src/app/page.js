@@ -50,7 +50,7 @@ export default function Home() {
               {" "}
               MGM students{" "}
             </span>
-            and alumni. Enjoy all you can eat food and drinks, exciting
+            and others. Enjoy all you can eat food and drinks, exciting
             activities, and a professional photographer to capture your moments.
           </p>
           <div>
