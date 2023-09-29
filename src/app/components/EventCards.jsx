@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const eventDetails = [
   {
     title: "Date",
@@ -40,7 +38,7 @@ export default function EventCards() {
           <div
             key={key}
             className="border max-w-xs flex flex-col justify-evenly items-center aspect-square border-accent rounded-md shadow-lg w-[60vw] text-center px-4 py-2">
-            <Image
+            <img
               src={el.imageSrc}
               alt={el.title}
               className=" w-16 rounded-full p-2 md:w-20"
