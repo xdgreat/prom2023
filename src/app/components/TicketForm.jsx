@@ -93,7 +93,7 @@ export default function TicketForm() {
     // Re-enable the purchase button after a delay (2 seconds)
     setTimeout(() => {
       purchaseButton.removeAttribute("disabled");
-    }, 2000);
+    }, 5000);
   };
 
   return (
