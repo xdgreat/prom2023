@@ -83,6 +83,17 @@ export default function TermsAndConditions() {
               or negotiate ticket prices will not be accepted.
             </p>
           </div>
+          <div className="prose">
+            <li className="text-base my-4 border-b-2 border-accent w-fit ">
+              Association Disclaimer:
+            </li>
+            <p className="text-sm text-white/90">
+              This website and the organization hosting the prom event are not
+              associated or affiliated with MGM or Mahatma Gandhi Memorial
+              School and are not related to it whatsoever. References to "MGM"
+              are related to the students who happen to be schooling in MGM.
+            </p>
+          </div>
         </div>
       </div>
       <Footer />

@@ -45,11 +45,10 @@ export default function Home() {
 
         <div className="px-4 py-2">
           <p className="text-center text-base md:text-xl md:max-w-2xl lg:max-w-3xl mx-auto">
-            This 18+ event welcomes
+            This 18+ event welcomes{" "}
             <span className="border-b-2 mx-1 border-accent w-fit">
-              {" "}
-              MGM students{" "}
-            </span>
+              MGM students
+            </span>{" "}
             and others. Enjoy all you can eat food and drinks, exciting
             activities, and a professional photographer to capture your moments.
           </p>
