@@ -26,8 +26,7 @@ export default function TermsAndConditions() {
             </li>
             <p className="text-sm text-white/90">
               Attendees must be of legal drinking age (if alcohol is served) and
-              must present valid ID upon request. Minors are not allowed to
-              attend the event, and their entry will be strictly prohibited.
+              must present valid ID upon request.
             </p>
           </div>
           <div className="prose">
@@ -90,8 +89,9 @@ export default function TermsAndConditions() {
             <p className="text-sm text-white/90">
               This website and the organization hosting the prom event are not
               associated or affiliated with MGM or Mahatma Gandhi Memorial
-              School and are not related to it whatsoever. References to "MGM"
-              are related to the students who happen to be schooling in MGM.
+              School and are not related to it whatsoever. References to
+              &quot;MGM&quot; are related to the students who happen to be
+              schooling in MGM.
             </p>
           </div>
         </div>
