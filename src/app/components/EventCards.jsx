@@ -16,7 +16,7 @@ const eventDetails = [
   },
   {
     title: "Guests",
-    value: "MGM students and outsiders are welcome with a companion ticket.",
+    value: "Outsiders are welcome with a companion ticket.",
     imageSrc: "/svg/person.svg",
   },
   {

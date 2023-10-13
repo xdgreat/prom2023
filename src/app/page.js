@@ -47,7 +47,7 @@ export default function Home() {
           <p className="text-center text-base md:text-xl md:max-w-2xl lg:max-w-3xl mx-auto">
             This 18+ event welcomes{" "}
             <span className="border-b-2 mx-1 border-accent w-fit">
-              MGM students
+              Year 13 Students
             </span>{" "}
             and others. Enjoy all you can eat food and drinks, exciting
             activities, and a professional photographer to capture your moments.

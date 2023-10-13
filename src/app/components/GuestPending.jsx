@@ -129,7 +129,7 @@ export default function GuestPending() {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <div className="text-center">
+      <div className="mx-auto w-fit">
         <p>Total Sales: ${totalSales}</p>
         <p>Total Tickets Sold: {totalTicketsSold}</p>
         <p>Total Guests: {totalGuests}</p>
