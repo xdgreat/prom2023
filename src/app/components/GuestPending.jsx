@@ -13,7 +13,6 @@ export default function GuestPending() {
       })
         .then((res) => res.json())
         .then((data) => getGuestData(data));
-      console.log(guestData);
     }, 5000);
   }, []);
 
@@ -117,6 +116,33 @@ export default function GuestPending() {
 
   const { totalSales, totalTicketsSold, totalGuests } = calculateTotals();
 
+  function formatDate(dateString) {
+    const options = {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    };
+    const year = new Date().getFullYear();
+    const october15th = new Date(year, 9, 15); // Month is 0-based, so 9 is October
+    const isAfterOctober15th = guestData.date >= october15th;
+
+    const formattedDate = new Date(dateString).toLocaleDateString(
+      "en-US",
+      options
+    );
+
+    return (
+      <span
+        className={`font-semibold text-white/70 text-sm ${
+          isAfterOctober15th ? "border-b-2 border-accent" : ""
+        }`}>
+        {formattedDate}
+      </span>
+    );
+  }
   return (
     <>
       <h2 className="text-center text-2xl mt-4 mb-8 font-semibold border-b-2 border-accent w-fit mx-auto">
@@ -150,6 +176,12 @@ export default function GuestPending() {
                 Order Number:
               </div>{" "}
               #{el.orderNumber}
+            </div>
+            <div className="text-white mt-2">
+              <div className="font-semibold text-white/70 text-sm {dateClasses}">
+                Date:
+              </div>{" "}
+              {formatDate(el.date)}
             </div>
             <div className="text-white mt-2">
               <div className="font-semibold text-white/70 text-sm">Name:</div>{" "}
