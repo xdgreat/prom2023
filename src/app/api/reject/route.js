@@ -25,7 +25,7 @@ export async function POST(request) {
     const { firstName, lastName, email, phoneNumber } = guest;
     const countryCode = "+679";
     const formattedPhoneNumber = `${countryCode}${phoneNumber}`;
-    const instagramUsername = "@fr3sh.budusy";
+    const instagramUsername = "@prom2023fiji";
     const message = `Hi ${firstName} ${lastName},\n\nWe regret to inform you that your payment was not received. If you believe this is in error or need assistance, please contact us on Instagram at https://instagram.com/${instagramUsername}.\n\nThank you for considering our event.`;
 
     await client.messages.create({
