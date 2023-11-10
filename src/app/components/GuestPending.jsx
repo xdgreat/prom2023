@@ -64,9 +64,8 @@ export default function GuestPending() {
       });
   };
 
+  const currentDate = new Date();
   const calculateTotals = () => {
-    const currentDate = new Date();
-
     const totalSales = guestData.reduce((total, guest) => {
       if (guest.status === "accepted") {
         const ticketPrice = calculateTicketPrice(guest);
