@@ -65,13 +65,12 @@ export default function GuestPending() {
   };
 
   const calculateTotals = () => {
+    const currentDate = new Date();
+
     const totalSales = guestData.reduce((total, guest) => {
       if (guest.status === "accepted") {
-        if (guest.ticketType === "plusOne") {
-          total += 55;
-        } else if (guest.ticketType === "standard") {
-          total += 30;
-        }
+        const ticketPrice = calculateTicketPrice(guest);
+        total += ticketPrice;
       }
       return total;
     }, 0);
@@ -92,6 +91,21 @@ export default function GuestPending() {
     }, 0);
 
     return { totalSales, totalTicketsSold, totalGuests };
+  };
+
+  const calculateTicketPrice = (guest) => {
+    const ticketPrice = guest.ticketType === "plusOne" ? 90 : 50;
+
+    // Check if the date is after October 15th
+    const october15th = new Date(currentDate.getFullYear(), 9, 15); // Month is 0-based, so 9 is October
+    const isAfterOctober15th = new Date(guest.date) >= october15th;
+
+    // If the date is after October 15th, adjust the ticket price
+    return isAfterOctober15th
+      ? ticketPrice
+      : guest.ticketType === "plusOne"
+      ? 55
+      : 30;
   };
 
   // Filter guest data based on search term
@@ -138,7 +152,8 @@ export default function GuestPending() {
       <span
         className={`font-semibold text-white/70 text-sm ${
           isAfterOctober15th ? "border-b-2 border-accent" : ""
-        }`}>
+        }`}
+      >
         {formattedDate}
       </span>
     );
@@ -170,7 +185,8 @@ export default function GuestPending() {
                 : el.status === "rejected"
                 ? "border-red-500"
                 : "border-accent"
-            }`}>
+            }`}
+          >
             <div className="text-white">
               <div className="font-semibold text-white/70 text-sm">
                 Order Number:
@@ -211,19 +227,22 @@ export default function GuestPending() {
                   <div className="flex gap-2 flex-row my-4">
                     <button
                       className="bg-green-500 text-white px-4 py-2 rounded-md"
-                      onClick={() => handleAccept(el.orderNumber)}>
+                      onClick={() => handleAccept(el.orderNumber)}
+                    >
                       Accept
                     </button>
                     <button
                       className="bg-red-500 text-white px-4 py-2 rounded-md"
-                      onClick={() => handleReject(el.orderNumber)}>
+                      onClick={() => handleReject(el.orderNumber)}
+                    >
                       Reject
                     </button>
                   </div>
                 ) : (
                   <button
                     className="bg-accent text-white px-4 py-2 rounded-md"
-                    onClick={() => setSelectedGuest(el.orderNumber)}>
+                    onClick={() => setSelectedGuest(el.orderNumber)}
+                  >
                     View
                   </button>
                 )
