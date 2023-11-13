@@ -3,6 +3,7 @@ import Countdown from "@/app/components/Countdown";
 export default async function orderNumber(context) {
   const guest = await fetch("https://prom2023.org/api/accept/e-ticket", {
     method: "POST",
+    cache: "no-store",
     body: JSON.stringify({ orderNumber: context.params.orderNumber }),
   })
     .then((res) => res.json())
@@ -11,6 +12,8 @@ export default async function orderNumber(context) {
   if (!guest || !guest[0]) {
     return <h1>Guest Not Found</h1>;
   }
+
+  console.log("testing" + guest[0].name);
 
   const { firstName, lastName, orderNumber, status, ticketType } = guest[0];
   let updatedTicketType;
