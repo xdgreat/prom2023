@@ -12,7 +12,8 @@ export default function Countdown() {
   });
 
   useEffect(() => {
-    const targetDate = new Date("2023-11-18T18:00:00"); // Define targetDate here
+    const targetDate = new Date("2023-12-02T18:00:00");
+    // Define targetDate here
 
     const interval = setInterval(() => {
       const currentDate = new Date();
