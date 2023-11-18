@@ -1,7 +1,7 @@
 const eventDetails = [
   {
     title: "Date",
-    value: "November 18th, 2023",
+    value: "December 2nd, 2023",
     imageSrc: "/svg/calendar.svg",
   },
   {
@@ -26,7 +26,7 @@ const eventDetails = [
   },
   {
     title: "Venue",
-    value: "Albert Park Hall, Suva",
+    value: "Metro Gym Hall, Suva",
     imageSrc: "/svg/location.svg",
   },
 ];
@@ -37,7 +37,8 @@ export default function EventCards() {
         return (
           <div
             key={key}
-            className="border max-w-xs flex flex-col justify-evenly items-center aspect-square border-accent rounded-md shadow-lg w-[60vw] text-center px-4 py-2">
+            className="border max-w-xs flex flex-col justify-evenly items-center aspect-square border-accent rounded-md shadow-lg w-[60vw] text-center px-4 py-2"
+          >
             <img
               src={el.imageSrc}
               alt={el.title}
