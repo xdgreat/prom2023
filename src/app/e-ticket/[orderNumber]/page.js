@@ -37,8 +37,8 @@ export default async function orderNumber(context) {
         <p className="text-lg mb-4  border-b-2 border-accent w-fit mx-auto">
           {firstName} {lastName}
         </p>
-        <p className="text-lg my-1 text-white/80">Albert Park Hall</p>
-        <p className="text-lg my-1 text-white/80">18th November 2023</p>
+        <p className="text-lg my-1 text-white/80">Metro Gym Hall</p>
+        <p className="text-lg my-1 text-white/80">5th December 2023</p>
         <p className="text-lg my-1 text-white/80">6pm-11pm</p>
         {/* <p className="text-sm text-white/80 py-1">
           Date of Birth: <span className="text-white text-base">{dob}</span>

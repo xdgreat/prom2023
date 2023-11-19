@@ -1,7 +1,7 @@
 const eventDetails = [
   {
     title: "Date",
-    value: "December 2nd, 2023",
+    value: "December 5th, 2023",
     imageSrc: "/svg/calendar.svg",
   },
   {
