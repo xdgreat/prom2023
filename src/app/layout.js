@@ -48,7 +48,7 @@ export default function RootLayout({ children }) {
         {/* <!-- test --> */}
         <ins
           class="adsbygoogle"
-          style="display:block"
+          style={{ display: "block" }}
           data-ad-client="ca-pub-9331570343272182"
           data-ad-slot="9208354729"
           data-ad-format="auto"
